@@ -1,8 +1,25 @@
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  @apply bg-stone-50 text-stone-950;
+}
+.dark {
+  @apply bg-stone-950 text-stone-200;
+}
+
 @layer base {
+  /* Customize your global styles here */
+
+  .flexcenter {
+    @apply flex items-center justify-center;
+  }
+  .sticky-nav {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    backdrop-filter: saturate(180%) blur(20px);
+    transition: background-color 0.1 ease-in-out;
+  }
 }
