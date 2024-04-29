@@ -40,7 +40,7 @@ const MobileNav = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative ">
       <div className="flex items-center justify-between gap-2">
         <NextLink href={mobileLinks[0].link} legacyBehavior>
           <a className="">{mobileLinks[0].name}</a>

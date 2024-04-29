@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <>
       {/* Navigation bar */}
-      <nav className="sticky-nav flex justify-between items-center max-w-4xl w-full p-8 mx-auto bg-opacity-60">
+      <header className="sticky-nav font-title flex justify-between items-center max-w-4xl w-full p-8 mx-auto bg-opacity-60">
         {/* Dark mode toggle button */}
         <button
           aria-label="Toggle Dark Mode"
@@ -49,7 +49,7 @@ const Navbar = () => {
           )}
         </button>
         <Navlinks />
-      </nav>
+      </header>
     </>
   );
 };
