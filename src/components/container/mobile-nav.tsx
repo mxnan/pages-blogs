@@ -1,4 +1,4 @@
-import { mobileLinks } from "@/lib/navlinks";
+import { mobileLinks } from "@/lib/links";
 import { AnimatePresence, motion } from "framer-motion";
 import NextLink from "next/link";
 import { useState } from "react";

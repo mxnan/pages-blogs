@@ -1,4 +1,4 @@
-import { desktoplinks } from "@/lib/navlinks";
+import { desktoplinks } from "@/lib/links";
 import { AnimatePresence, motion } from "framer-motion";
 import NextLink from "next/link";
 import { useRouter } from "next/router";

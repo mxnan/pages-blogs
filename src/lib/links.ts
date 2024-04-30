@@ -1,3 +1,5 @@
+
+
 // Navigation links for desktop
 export const desktoplinks = [
   { name: "Home", link: "/" },
@@ -15,5 +17,6 @@ export const mobileLinks = [
   { name: "Snippets", link: "/snippets" },
   { name: "Contact", link: "/contact" },
 
-  // Add more links as needed
+  // Add m
 ];
+

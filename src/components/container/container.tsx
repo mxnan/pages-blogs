@@ -23,8 +23,8 @@ export default function Container(props: any) {
       <Navbar />
       <div className="flex flex-col justify-center  p-8  antialiased">
         {children}
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }
