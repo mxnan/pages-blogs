@@ -4,7 +4,7 @@ import { GithubIcon, LinkedinIcon, TwitterIcon } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="flexcenter  max-w-4xl w-full p-16 mx-auto">
+    <footer className="flexcenter  max-w-4xl w-full p-12 mx-auto">
       <div className="flexcenter max-sm:flex-col gap-2">
         <Button
           variant={"ghost"}

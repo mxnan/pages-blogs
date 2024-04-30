@@ -5,7 +5,7 @@ import Mobilenav from "./mobile-nav";
 
 const Navlinks = () => {
   return (
-    <nav>
+    <nav className="font-title">
       {/* Desktop navigation links */}
       <div className="hidden sm:block">
         <Desktopnav />
