@@ -1,11 +1,6 @@
-export interface SnippetMetadata {
+export type SnippetPreview = {
   title: string;
   description: string;
   icon: string;
-}
-
-export interface Snippet {
   slug: string;
-  metadata: SnippetMetadata;
-  content: string[];
-}
+};

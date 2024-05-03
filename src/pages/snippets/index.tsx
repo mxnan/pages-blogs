@@ -2,11 +2,13 @@
 
 import Container from "@/components/container/container";
 import SnippetCard from "@/components/snippet-card";
+import { getSnippetPreviews } from "@/lib/snippets";
+import { InferGetStaticPropsType } from "next";
 import React from "react";
-import { getSnippets } from "@/lib/snippets";
-import { Snippet } from "@/lib/types";
 
-const Snippetspage = ({ snippets }: { snippets: Snippet[] }) => {
+const Snippetspage = ({
+  snippets,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Container
       title="Snippets"
@@ -17,21 +19,18 @@ const Snippetspage = ({ snippets }: { snippets: Snippet[] }) => {
         <p>Sharing code snippets which you can use in your projects.</p>
         <p>Some I have created, and some I have copied and improvised.</p>
         <div className="max-w-3xl mt-12 mx-auto grid gap-4 grid-cols-1 sm:grid-cols-2 ">
-          <SnippetCard snippets={snippets} />
+          {snippets.map((snippet, i) => (
+            <SnippetCard key={i} snippet={snippet} />
+          ))}
         </div>
       </div>
     </Container>
   );
 };
 
-export async function getServerSideProps() {
-  const snippets = getSnippets(); // Call getSnippets here
-
-  return {
-    props: {
-      snippets,
-    },
-  };
+export async function getStaticProps() {
+  const snippets = await getSnippetPreviews();
+  return { props: { snippets } };
 }
 
 export default Snippetspage;
