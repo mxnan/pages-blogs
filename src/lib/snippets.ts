@@ -1,30 +1,36 @@
-// src/lib/snippets.ts
 import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
-import { Snippet, SnippetMetadata } from "./types";
+import { serialize } from "next-mdx-remote/serialize";
+import { SnippetPreview } from "./types";
 
-const snippetsDirectory = path.join(process.cwd(), "src", "data", "snippets");
-
-export function getSnippets(): Snippet[] {
-  const fileNames = fs.readdirSync(snippetsDirectory);
-
-  return fileNames
-    .filter((fileName) => fileName.endsWith(".mdx"))
-    .map((fileName) => {
-      //path
-      const fullPath = path.join(snippetsDirectory, fileName);
-      //filecontents
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-      //data and content
-      const { data, content } = matter(fileContents);
-      //slug
-      const slug = fileName.replace(".mdx", "");
-
-      return {
-        slug,
-        metadata: data as SnippetMetadata,
-        content: content.split("\n"),
-      };
+export async function getSnippetPreviews(): Promise<SnippetPreview[]> {
+  // get all MDX files
+  const snippetFilePaths = fs
+    .readdirSync("src/data/snippets")
+    .filter((snippetFilePath) => {
+      return path.extname(snippetFilePath).toLowerCase() === ".mdx";
     });
+
+  const snippetPreviews: SnippetPreview[] = [];
+
+  // read the frontmatter for each file
+  for (const snippetFilePath of snippetFilePaths) {
+    const snippetFile = fs.readFileSync(
+      `./src/data/snippets/${snippetFilePath}`,
+      "utf8"
+    );
+    // serialize the MDX content to a React-compatible format
+    // and parse the frontmatter
+    const serializedSnippet = await serialize(snippetFile, {
+      parseFrontmatter: true,
+    });
+
+    snippetPreviews.push({
+      ...serializedSnippet.frontmatter,
+      // add the slug to the frontmatter info
+      slug: snippetFilePath.replace(".mdx", ""),
+    } as SnippetPreview);
+  }
+
+  return snippetPreviews;
 }
