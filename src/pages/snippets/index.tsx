@@ -1,7 +1,7 @@
 // pages/snippets.tsx
 
-import Container from "@/components/container/container";
-import SnippetCard from "@/components/snippet-card";
+
+import { Container, SnippetCard } from "@/components";
 import { getSnippetPreviews } from "@/lib/snippets";
 import { InferGetStaticPropsType } from "next";
 import React from "react";

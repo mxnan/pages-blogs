@@ -1,8 +1,14 @@
+/* eslint-disable jsx-a11y/aria-unsupported-elements */
 import Head from "next/head";
 import Navbar from "./navbar";
 import Footer from "./footer";
 
-export default function Container(props: any) {
+interface ContainerProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+}
+export default function Container(props: ContainerProps) {
   const { children, ...customMeta } = props;
 
   const meta = {
@@ -17,7 +23,7 @@ export default function Container(props: any) {
         {/* Set meta tags for SEO */}
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
-        <meta content={meta.description} name="description" />
+        <meta content={meta.description} name="description" key="description" aria-label="description" />
         {/* Add more meta tags as needed */}
       </Head>
       <Navbar />

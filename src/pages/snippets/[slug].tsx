@@ -1,7 +1,7 @@
-import Container from "@/components/container/container";
 import { getSnippetPreviews, getSnippetSource } from "@/lib/snippets";
-import React from "react";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { MdxLayout, P, Strong } from "@/components/mdx";
+import { Container } from "@/components";
 
 interface SingleSnippetPageProps {
   source: MDXRemoteSerializeResult;
@@ -9,15 +9,17 @@ interface SingleSnippetPageProps {
 
 const SingleSnippetPage: React.FC<SingleSnippetPageProps> = ({ source }) => {
   return (
-    <Container
-      title={source.frontmatter.title}
-      description={source.frontmatter.description}
-    >
-      <div className="max-w-4xl mx-auto w-full h-screen space-y-4 p-2 ">
-        <div className="prose lg:prose-lg max-w-none">
-          <MDXRemote {...source} />
-        </div>
-      </div>
+    <Container title="Snippets" description="Showing all code snippets here">
+      <MdxLayout>
+        <MDXRemote
+          {...source}
+          // specifying the custom MDX components
+          components={{
+            p: P,
+            strong: Strong,
+          }}
+        />
+      </MdxLayout>
     </Container>
   );
 };
