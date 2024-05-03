@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { serialize } from "next-mdx-remote/serialize";
 import { SnippetPreview } from "./types";
+import { GetStaticPropsContext } from "next";
 
 export async function getSnippetPreviews(): Promise<SnippetPreview[]> {
   // get all MDX files
@@ -33,4 +34,20 @@ export async function getSnippetPreviews(): Promise<SnippetPreview[]> {
   }
 
   return snippetPreviews;
+}
+
+export async function getSnippetSource(
+  ctx: GetStaticPropsContext<{ slug: string }>
+) {
+  const { slug } = ctx.params!;
+
+  // retrieve the MDX snippet file associated
+  // with the specified slug parameter
+  const snippetFile = fs.readFileSync(`./src/data/snippets/${slug}.mdx`);
+
+  // read the MDX serialized content along with the frontmatter
+  // from the .mdx snippet file
+  const mdxSource = await serialize(snippetFile, { parseFrontmatter: true });
+
+  return mdxSource;
 }

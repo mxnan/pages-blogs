@@ -10,7 +10,7 @@ const SnippetCard = ({ snippet }: { snippet: SnippetPreview }) => {
       <Link
         key={snippet.slug}
         className="max-w-sm min-h-36 w-full p-4 rounded-lg border"
-        href={`/snippet/${snippet.slug}`}
+        href={`/snippets/${snippet.slug}`}
       >
         <div className="w-full space-y-2 ">
           <p className="text-neutral-600 dark:text-neutral-400 w-[100px] tabular-nums">
