@@ -5,3 +5,4 @@ export type SnippetPreview = {
   slug: string;
   readingtime: string;
 };
+
