@@ -1,6 +1,7 @@
 export type SnippetPreview = {
   title: string;
   description: string;
-  icon: string;
+  publishedAt: string;
   slug: string;
+  readingtime: string;
 };

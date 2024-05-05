@@ -3,31 +3,28 @@
 import React from "react";
 import Link from "next/link";
 import { SnippetPreview } from "@/lib/types";
-import Image from "next/image";
 
-const SnippetCard = ({ title, description, slug, icon }: SnippetPreview) => {
+const SnippetCard = ({ snippet }: { snippet: SnippetPreview }) => {
   return (
     <>
       <Link
-        key={slug}
+        key={snippet.slug}
         className="max-w-sm min-h-36 w-full p-4 rounded-xl border"
-        href={`/snippets/${slug}`}
+        href={`/snippets/${snippet.slug}`}
       >
         <div className="w-full relative space-y-4 flex-1">
           <p className=" text-violet-600 dark:text-amber-600 uppercase tracking-tight">
-            {title}
+            {snippet.title}
           </p>
           <p className="text-stone-600 dark:text-stone-400 tracking-tight">
-            {description}
+            {snippet.description}
           </p>
-
-          <Image
-            src={`/icons/${icon}`}
-            alt={title}
-            width={32}
-            height={32}
-            className="rounded-xl border"
-          />
+          <p className="text-stone-600 dark:text-stone-400 tracking-tight">
+            {snippet.publishedAt}
+          </p>
+          <p className="text-stone-600 dark:text-stone-400 tracking-tight">
+            {snippet.readingtime}
+          </p>
         </div>
       </Link>
     </>

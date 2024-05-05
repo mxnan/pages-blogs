@@ -5,7 +5,7 @@
 :root {
   @apply bg-white text-stone-900;
 }
-.dark {
+.dark:root {
   @apply bg-stone-950 text-stone-300;
 }
 

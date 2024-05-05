@@ -4,6 +4,7 @@ import { Container, SnippetCard } from "@/components";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { getSnippetPreviews } from "@/lib/snippets";
+import dayjs from "dayjs";
 import { InferGetStaticPropsType } from "next";
 import React from "react";
 import { toast } from "sonner";
@@ -19,15 +20,14 @@ const Snippetspage = ({
       },
     });
   };
+
   return (
     <Container
       title="Snippets"
       description="Code snippets for display, edit, and share"
     >
       <div className="max-w-4xl mx-auto w-full space-y-6 p-2 ">
-        <h1 className="text-7xl mb-10  uppercase underline sm:underline-offset-[16px]">
-          Code Snippets
-        </h1>
+        <h1 className="text-7xl mb-10  uppercase ">Code Snippets</h1>
         <p className="text-3xl">
           Sharing code snippets which you can use in your projects.
         </p>
@@ -46,13 +46,7 @@ const Snippetspage = ({
            justify-items-center gap-x-5 gap-y-5"
           >
             {snippets.map((snippet, i) => (
-              <SnippetCard
-                key={i}
-                title={snippet.title}
-                slug={snippet.slug}
-                icon={snippet.icon}
-                description={snippet.description}
-              />
+              <SnippetCard key={i} snippet={snippet} />
             ))}
             <div
               className="max-w-sm min-h-36 w-full p-4 rounded-xl border
@@ -71,6 +65,13 @@ const Snippetspage = ({
 
 export async function getStaticProps() {
   const snippets = await getSnippetPreviews();
+  // Sort the snippets array in descending order based on the publishedAt property
+  snippets.sort((a, b) => {
+    const dateA = dayjs(a.publishedAt);
+    const dateB = dayjs(b.publishedAt);
+    return dateB.diff(dateA);
+  });
+
   return { props: { snippets } };
 }
 

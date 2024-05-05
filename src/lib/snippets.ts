@@ -3,6 +3,7 @@ import path from "path";
 import { serialize } from "next-mdx-remote/serialize";
 import { SnippetPreview } from "./types";
 import { GetStaticPropsContext } from "next";
+import readingTime from "reading-time";
 
 export async function getSnippetPreviews(): Promise<SnippetPreview[]> {
   // get all MDX files
@@ -25,11 +26,14 @@ export async function getSnippetPreviews(): Promise<SnippetPreview[]> {
     const serializedSnippet = await serialize(snippetFile, {
       parseFrontmatter: true,
     });
+    // calculate reading time based on the compiled source
+    const readingTimeStats = readingTime(serializedSnippet.compiledSource);
 
     snippetPreviews.push({
       ...serializedSnippet.frontmatter,
-      // add the slug to the frontmatter info
+      // add the slug and reading time to the frontmatter info
       slug: snippetFilePath.replace(".mdx", ""),
+      readingtime: readingTimeStats.text,
     } as SnippetPreview);
   }
 
