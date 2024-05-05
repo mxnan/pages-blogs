@@ -2,9 +2,9 @@ import { Toaster } from "@/components/ui/sonner";
 import "@/styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
-import { Inter, Titillium_Web } from "next/font/google";
+import { Orbitron, Titillium_Web } from "next/font/google";
 
-const title = Inter({
+const title = Orbitron({
   display: "swap",
   variable: "--font-title",
   subsets: ["latin"],

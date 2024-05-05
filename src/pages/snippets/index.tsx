@@ -52,7 +52,7 @@ const Snippetspage = ({
             ))}
             <div
               className="max-w-sm min-h-36 w-full p-4 rounded-xl border
-          flex items-end justify-end "
+                  flex items-end justify-end "
             >
               <Button variant={"ghost"} onClick={handleonclick}>
                 More .?
