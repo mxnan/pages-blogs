@@ -1,6 +1,6 @@
 import { getSnippetPreviews, getSnippetSource } from "@/lib/snippets";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import { MdxLayout, P, Strong, IconImage } from "@/components/mdx";
+import { MdxLayout, P, Strong } from "@/components/mdx";
 import { Container } from "@/components";
 
 interface SingleSnippetPageProps {
@@ -17,7 +17,6 @@ const SingleSnippetPage: React.FC<SingleSnippetPageProps> = ({ source }) => {
           components={{
             p: P,
             strong: Strong,
-            IconImage,
           }}
         />
       </MdxLayout>

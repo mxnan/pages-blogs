@@ -27,17 +27,19 @@ const Snippetspage = ({
       description="Code snippets for display, edit, and share"
     >
       <div className="max-w-4xl mx-auto w-full space-y-6 p-2 ">
-        <h1 className="text-7xl mb-10  uppercase ">Code Snippets</h1>
-        <p className="text-3xl">
+        <h1 className="text-7xl mb-10 font-bold font-title uppercase ">
+          Code Snippets
+        </h1>
+        <p className="text-3xl font-medium">
           Sharing code snippets which you can use in your projects.
         </p>
-        <p className="text-xl">
+        <p className="text-xl font-extralight">
           Some I have created, and some I have copied and improvised.
         </p>
         <Separator
           orientation="horizontal"
           decorative
-          className=" my-10 max-w-2xl"
+          className="my-10 max-w-3xl"
         />
         <div className="max-w-3xl py-8 mx-auto flexcenter">
           <div
