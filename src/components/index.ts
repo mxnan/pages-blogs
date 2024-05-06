@@ -1,5 +1,5 @@
 import Container from "./container/container";
-import SnippetCard from "./snippet-card";
-import ResourceCard from "./resource-card";
+import SnippetCard from "./cards/snippet-card";
+import ResourceCard from "./cards/resource-card";
 
 export { Container, SnippetCard, ResourceCard };

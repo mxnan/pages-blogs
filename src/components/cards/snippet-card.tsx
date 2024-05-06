@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { SnippetPreview } from "@/lib/types";
-import { Separator } from "./ui/separator";
+import { Separator } from "../ui/separator";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 dayjs.extend(relativeTime);
