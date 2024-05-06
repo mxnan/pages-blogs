@@ -14,7 +14,7 @@ const DesktopNav = () => {
           <a
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
-            className="relative rounded-xl px-4 py-2 "
+            className="relative rounded-xl px-4 py-2 uppercase font-bold "
           >
             <AnimatePresence>
               {hoveredIndex === index && (
@@ -33,7 +33,7 @@ const DesktopNav = () => {
             <span
               className={`relative z-10 ${
                 router.asPath === link.link &&
-                "text-violet-600 dark:text-amber-600 font-medium  transition-all duration-1000 ease-in-out"
+                "text-violet-600 dark:text-amber-600  transition-all duration-1000 ease-in-out"
               }`}
             >
               {link.name}

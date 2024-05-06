@@ -40,7 +40,7 @@ const MobileNav = () => {
   };
 
   return (
-    <div className="relative ">
+    <div className="relative uppercase font-semibold text-xs ">
       <div className="flex items-center justify-between gap-2">
         <NextLink href={mobileLinks[0].link} legacyBehavior>
           <a className="">{mobileLinks[0].name}</a>
@@ -77,11 +77,11 @@ const MobileNav = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="absolute top-10 right-0 w-28 mx-auto bg-stone-100 dark:bg-stone-900 shadow-md rounded-md p-4"
+            className="absolute top-10 right-0 w-max mx-auto bg-stone-100 dark:bg-stone-900 shadow-md rounded-md p-4"
           >
             {mobileLinks.slice(1).map((link: MobileLinkProps) => (
               <NextLink key={link.link} href={link.link} legacyBehavior>
-                <a className="block py-2 ">{link.name}</a>
+                <a className="block py-2  ">{link.name}</a>
               </NextLink>
             ))}
           </motion.div>

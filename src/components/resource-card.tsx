@@ -1,0 +1,50 @@
+import Link from "next/link";
+import { Button } from "./ui/button";
+import { ExternalLinkIcon } from "lucide-react";
+// import Image from "next/image";
+
+interface ResourceCardProps {
+  title: string;
+  description: string;
+  link: string;
+  websiteLink: string;
+}
+
+export default function ResourceCard({
+  title,
+  description,
+  link,
+  websiteLink,
+}: ResourceCardProps) {
+  return (
+    <div className="max-w-sm max-h-44 w-full p-4 flex flex-col justify-around space-y-2 rounded-xl border">
+      <h3 className="text-xl font-bold uppercase text-left mt-2 text-violet-500 dark:text-amber-800">
+        {title}
+      </h3>
+      <p className="mt-1 text-gray-700 dark:text-gray-400">{description}</p>
+      <Button
+        variant={"ghost"}
+        className="mt-5 space-x-2 group w-max"
+        onClick={() => window.open(websiteLink, "_blank")}
+      >
+        Visit{" "}
+        <ExternalLinkIcon
+          strokeWidth={1.5}
+          className="ml-2 
+          group-hover:scale-90
+          transition-all duration-700 ease-in-out
+           group-hover:stroke-violet-600 dark:group-hover:stroke-amber-800"
+        />
+        <span
+          className="font-medium text-sm 
+        group-hover:text-lg
+        group-hover:font-bold
+        transition-all duration-700 ease-in-out
+        group-hover:text-violet-500 dark:group-hover:text-amber-800"
+        >
+          {link}
+        </span>
+      </Button>
+    </div>
+  );
+}

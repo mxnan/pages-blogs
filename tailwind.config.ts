@@ -11,6 +11,9 @@ const config = {
   prefix: "",
   theme: {
     extend: {
+      screens: {
+        sm: "500px",
+      },
       fontFamily: {
         // 👇 Add CSS variables
         title: ["var(--font-title)"],

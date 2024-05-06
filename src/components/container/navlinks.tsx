@@ -7,11 +7,11 @@ const Navlinks = () => {
   return (
     <nav className="font-title">
       {/* Desktop navigation links */}
-      <div className="hidden sm:block">
+      <div className="hidden md:block">
         <Desktopnav />
       </div>
       {/* Mobile navigation links */}
-      <div className="block sm:hidden">
+      <div className="block md:hidden">
         <Mobilenav />
       </div>
     </nav>
