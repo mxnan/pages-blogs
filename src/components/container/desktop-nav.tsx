@@ -33,7 +33,7 @@ const DesktopNav = () => {
             <span
               className={`relative z-10 ${
                 router.asPath === link.link &&
-                "text-violet-600 dark:text-amber-600  transition-all duration-1000 ease-in-out"
+                "text-violet-600 dark:text-emerald-500  transition-all duration-1000 ease-in-out"
               }`}
             >
               {link.name}

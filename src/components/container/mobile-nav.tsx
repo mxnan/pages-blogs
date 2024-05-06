@@ -81,7 +81,7 @@ const MobileNav = () => {
           >
             {mobileLinks.slice(1).map((link: MobileLinkProps) => (
               <NextLink key={link.link} href={link.link} legacyBehavior>
-                <a className="block py-2  ">{link.name}</a>
+                <a className="block py-2 ">{link.name}</a>
               </NextLink>
             ))}
           </motion.div>

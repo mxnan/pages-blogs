@@ -33,11 +33,11 @@ const Snippetspage = ({
         </h1>
         <p className="text-lg font-light flex max-md:flex-col md:items-center gap-2 whitespace-normal ">
           This page contains
-          <span className="px-2 rounded-lg border shadow-violet-500 dark:shadow-amber-800 font-bold w-max">
+          <span className="px-2 rounded-lg border shadow-violet-500 dark:shadow-emerald-500 font-bold w-max">
             code snippets
           </span>
           which you can use in your projects.
-          <CodeXmlIcon strokeWidth={1} className="stroke-violet-600 dark:stroke-amber-800  max-md:ml-2" />
+          <CodeXmlIcon strokeWidth={1} className="stroke-violet-600 dark:stroke-emerald-500  max-md:ml-2" />
         </p>
         <p className="text-sm font-light">
           Custom snippets for your use , some i have created , some are
@@ -65,7 +65,7 @@ const Snippetspage = ({
               <Button
                 variant={"ghost"}
                 onClick={handleonclick}
-                className="text-violet-600 dark:text-amber-600 uppercase text-xl tracking-tight "
+                className="text-violet-600 dark:text-emerald-500 text-lg font-bold"
               >
                 More .?
               </Button>

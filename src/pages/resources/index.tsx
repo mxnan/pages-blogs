@@ -12,7 +12,7 @@ const Resourcespage = () => {
         </h1>
         <p className="text-lg font-light">
           Here are some of the resources I used to{" "}
-          <span className="px-2 rounded-lg border shadow-violet-500 dark:shadow-amber-800 font-bold w-max">
+          <span className="px-2 rounded-lg border shadow-violet-500 dark:shadow-emerald-500 font-bold w-max">
             build
           </span>{" "}
           this website and more.

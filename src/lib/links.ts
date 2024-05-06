@@ -22,14 +22,20 @@ export const mobileLinks = [
 export const utilityResourceLinks = [
   {
     title: "Shadcn-UI",
-    description:
-      "Best react component library , Best with Nextjs.",
+    description: "Best react component library , Best with Nextjs.",
     websiteLink: "https://ui.shadcn.com/docs/installation/next",
     link: "Shadcn",
   },
+
+  {
+    title: "Nextjs",
+    description: "Docs are really helpful. Provides many features for devs.",
+    websiteLink: "https://nextjs.org/docs/getting-started",
+    link: "Nextjs",
+  },
   {
     title: "lucide-react",
-    description: "Icon library for React . Many icons straight in jsx format.",
+    description: "Icon library for React. Stylable with tailwindcss ",
     websiteLink: "https://lucide.dev/",
     link: "Lucide",
   },
@@ -40,9 +46,9 @@ export const userInterfaceResourceLinks = [
   {
     title: "Tailwind",
     description:
-      "If you like giving 30 classes to a p tag. Link to install by framework.",
+      "Only If you like giving 30 classes to a p tag.",
     websiteLink: "https://tailwindcss.com/docs/installation/framework-guides",
-    link: "tailwindcss.com",
+    link: "tailwindcss",
   },
   {
     title: "SCSS/SASS",
@@ -55,6 +61,6 @@ export const userInterfaceResourceLinks = [
     title: "ChakraUI",
     description: "How can you not choose tailwind or scss?",
     websiteLink: "https://chakra-ui.com/getting-started",
-    link: "chakra-ui.com",
+    link: "chakra-ui",
   },
 ];

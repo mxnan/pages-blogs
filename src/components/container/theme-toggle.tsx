@@ -22,7 +22,7 @@ const Themebutton = () => {
               viewBox="0 0 24 24"
               fill="currentColor"
               stroke="currentColor"
-              className="h-5 w-5 text-violet-600 dark:text-amber-600"
+              className="h-5 w-5 text-violet-600 dark:text-emerald-600"
             >
               {theme === "dark" ? (
                 <path
