@@ -14,6 +14,7 @@ export const mobileLinks = [
   { name: "Resources", link: "/resources" },
   { name: "Snippets", link: "/snippets" },
   { name: "Contact", link: "/contact" },
+  { name: "Blog", link: "/blog" },
 
   // Add more links as needed
 ];

@@ -25,11 +25,11 @@ const Contactpage = () => {
 
           <Separator
             orientation="vertical"
-            className="hidden lg:block mx-6 h-96"
+            className="hidden lg:block mx-6 h-96 bg-violet-300 dark:bg-emerald-950"
           />
           <Separator
             orientation="horizontal"
-            className="lg:hidden max-w-xl my-8"
+            className="lg:hidden max-w-xl my-8 bg-violet-300 dark:bg-emerald-950"
           />
 
             {/* form section  */}
