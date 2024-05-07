@@ -1,4 +1,5 @@
 import { Toaster } from "@/components/ui/sonner";
+import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
@@ -20,12 +21,19 @@ const body = Titillium_Web({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <ThemeProvider attribute="class">
-        <main className={`${title.variable} ${body.variable} font-body`}>
+      <main
+        className={cn("font-body antialiased", title.variable, body.variable)}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <Component {...pageProps} />
           <Toaster />
-        </main>
-      </ThemeProvider>
+        </ThemeProvider>
+      </main>
     </>
   );
 }
