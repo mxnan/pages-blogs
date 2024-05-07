@@ -1,4 +1,5 @@
 import { desktoplinks } from "@/lib/links";
+import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
@@ -31,10 +32,11 @@ const DesktopNav = () => {
               )}
             </AnimatePresence>
             <span
-              className={`relative z-10 ${
+              className={cn(
+                "transition-all duration-1000 ease-in-out relative z-10",
                 router.asPath === link.link &&
-                "text-violet-600 dark:text-emerald-500  transition-all duration-1000 ease-in-out"
-              }`}
+                  "text-violet-600 dark:text-emerald-500"
+              )}
             >
               {link.name}
             </span>
