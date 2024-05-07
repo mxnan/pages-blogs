@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { Button } from "../ui/button";
 import { ExternalLinkIcon } from "lucide-react";
+
 // import Image from "next/image";
 
 interface ResourceCardProps {
@@ -27,7 +27,14 @@ export default function ResourceCard({
         className="mt-5 space-x-2 group w-max"
         onClick={() => window.open(websiteLink, "_blank")}
       >
-        Visit{" "}
+        <span
+          className="font-bold text-lg 
+        group-hover:text-sm group-hover:font-bold
+        transition-all duration-700 ease-in-out
+        "
+        >
+          Visit
+        </span>
         <ExternalLinkIcon
           strokeWidth={1.5}
           className="ml-2 
@@ -37,10 +44,9 @@ export default function ResourceCard({
         />
         <span
           className="font-medium text-sm 
-        group-hover:text-lg
-        group-hover:font-bold
+        group-hover:text-lg group-hover:font-bold
         transition-all duration-700 ease-in-out
-        group-hover:text-violet-500 dark:group-hover:text-emerald-500"
+       "
         >
           {link}
         </span>
