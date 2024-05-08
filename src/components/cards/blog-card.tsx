@@ -14,7 +14,7 @@ const BlogCard = ({ blog }: { blog: BlogPreview }) => {
     <>
       <Link
         key={blog.slug}
-        className="min-h-36 w-full p-4 rounded-xl border border-violet-200 dark:border-emerald-950"
+        className="min-h-36 p-4 rounded-xl border border-violet-200 dark:border-emerald-950"
         href={`/blog/${blog.slug}`}
       >
         <div className="w-full relative flex-1">

@@ -1,12 +1,9 @@
 import { mobileLinks } from "@/lib/links";
+import { MobileLinkProps } from "@/lib/types";
 import { AnimatePresence, motion } from "framer-motion";
 import NextLink from "next/link";
 import { useState } from "react";
 
-interface MobileLinkProps {
-  name: string;
-  link: string;
-}
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);

@@ -29,3 +29,7 @@ export type BlogPreview = {
   slug: string;
   readingtime: string;
 };
+export interface MobileLinkProps {
+  name: string;
+  link: string;
+}

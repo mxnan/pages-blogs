@@ -12,8 +12,12 @@ const BlogsPage = ({
     <Container title="Blogs" description="Sharing my learning and findings">
       <div className="max-w-4xl mx-auto w-full flex flex-col justify-center gap-4 p-2 ">
         <h1 className="text-7xl mb-6 font-bold font-title uppercase ">Blogs</h1>
-        <p className="text-xl font-light flex max-md:flex-col md:items-center gap-2 whitespace-normal ">
-          Sharing my learnings and experiences.
+        <p className="text-xl font-light">
+          Sharing my 
+          <span className="px-2 mx-2 rounded-lg border shadow-violet-500 dark:shadow-emerald-500 font-bold w-max">
+            learning
+          </span>
+           and experiences.
         </p>
 
         <Separator
