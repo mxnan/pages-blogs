@@ -5,13 +5,13 @@ import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import { Orbitron, Titillium_Web } from "next/font/google";
 
-const title = Orbitron({
+export const title = Orbitron({
   display: "swap",
   variable: "--font-title",
   subsets: ["latin"],
 });
 
-const body = Titillium_Web({
+export const body = Titillium_Web({
   weight: ["200", "300", "400", "600", "700", "900"],
   variable: "--font-body",
   subsets: ["latin"],

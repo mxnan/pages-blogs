@@ -1,14 +1,8 @@
+import { ResourceCardProps } from "@/lib/types";
 import { Button } from "../ui/button";
 import { ExternalLinkIcon } from "lucide-react";
 
 // import Image from "next/image";
-
-interface ResourceCardProps {
-  title: string;
-  description: string;
-  link: string;
-  websiteLink: string;
-}
 
 export default function ResourceCard({
   title,

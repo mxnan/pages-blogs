@@ -33,3 +33,15 @@ export interface MobileLinkProps {
   name: string;
   link: string;
 }
+export interface ResourceCardProps {
+  title: string;
+  description: string;
+  link: string;
+  websiteLink: string;
+}
+
+export interface ContainerProps {
+  children: React.ReactNode;
+  title?: string;
+  description?: string;
+}

@@ -2,12 +2,8 @@
 import Head from "next/head";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import { ContainerProps } from "@/lib/types";
 
-interface ContainerProps {
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-}
 export default function Container(props: ContainerProps) {
   const { children, ...customMeta } = props;
 

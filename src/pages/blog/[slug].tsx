@@ -4,7 +4,7 @@ import { getBlogPreviews, getBlogSource } from "@/lib/blogs";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import React from "react";
 
-interface SingleBlogPageProps {
+export interface SingleBlogPageProps {
   source: MDXRemoteSerializeResult<{
     frontmatter: {
       title: string;

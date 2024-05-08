@@ -3,7 +3,7 @@ import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import MDXComponents, { MdxLayout } from "@/components/mdx";
 import { Container } from "@/components";
 
-interface SingleSnippetPageProps {
+export interface SingleSnippetPageProps {
   source: MDXRemoteSerializeResult<{
     frontmatter: {
       title: string;
