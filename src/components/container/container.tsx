@@ -26,6 +26,7 @@ export default function Container(props: ContainerProps) {
       <div className="flex flex-col justify-center  p-8  antialiased">
         {children}
       </div>
+      
       <Footer />
     </div>
   );

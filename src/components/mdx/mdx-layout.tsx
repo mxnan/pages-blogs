@@ -1,10 +1,18 @@
-import { UndoIcon } from "lucide-react";
+import { MoveUpIcon, UndoIcon } from "lucide-react";
 import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 import { Separator } from "../ui/separator";
 
 export default function MdxLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter(); // Initialize the router
+
+  // this is function that will scroll to the top of the page when the button is clicked
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   // Create any shared layout or styles here
 
@@ -22,6 +30,17 @@ export default function MdxLayout({ children }: { children: React.ReactNode }) {
       </div>
       <Separator className="mb-8 max-w-xl" />
       <div className="flex flex-col gap-2">{children}</div>
+      <Separator className="my-8 max-w-xl" />
+      <div className="">
+        <Button
+          onClick={() => scrollToTop()} // scroll to top
+          variant={"secondary"}
+          className="space-x-3"
+        >
+          <MoveUpIcon className="stroke-violet-500 dark:stroke-emerald-500" />
+          <span>Back to Top ? </span>
+        </Button>
+      </div>
     </div>
   );
 }
