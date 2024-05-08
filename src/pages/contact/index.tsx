@@ -10,7 +10,7 @@ const Contactpage = () => {
       <div className="h-[70vh] max-w-5xl lg:max-w-7xl mx-auto w-full">
         <div className="flex-1 flex flex-col max-lg:items-center lg:flex-row lg:mt-24">
           {/* text area  */}
-          <div className="space-y-8 max-w-xl w-full ">
+          <div className="space-y-8 max-w-xl lg:max-w-[610px] md:max-w-xl w-full ">
             <h1 className="md:text-5xl xl:text-6xl text-3xl font-title">
               Emailjs Implementation
             </h1>
@@ -33,7 +33,7 @@ const Contactpage = () => {
           />
 
             {/* form section  */}
-          <div className="max-w-2xl max-lg:max-w-xl w-full lg:px-2">
+          <div className="max-w-md max-lg:max-w-xl w-full lg:px-2">
             <FormSection />
           </div>
         </div>
