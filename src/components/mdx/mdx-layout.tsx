@@ -16,12 +16,12 @@ export default function MdxLayout({ children }: { children: React.ReactNode }) {
           variant={"secondary"}
           className="space-x-3"
         >
-          <UndoIcon />
-          <span>Back to all snippets</span>
+          <UndoIcon className="stroke-violet-500 dark:stroke-emerald-500" />
+          <span>Back </span>
         </Button>
       </div>
-      <Separator className="mb-10 max-w-xl" />
-      <div className="space-y-5">{children}</div>
+      <Separator className="mb-8 max-w-xl" />
+      <div className="flex flex-col gap-2">{children}</div>
     </div>
   );
 }
