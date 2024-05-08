@@ -1,9 +1,10 @@
-import { getSnippetPreviews, getSnippetSource } from "@/lib/snippets";
-import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
-import MDXComponents, { MdxLayout } from "@/components/mdx";
 import { Container } from "@/components";
+import MDXComponents, { MdxLayout } from "@/components/mdx";
+import { getBlogPreviews, getBlogSource } from "@/lib/blogs";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import React from "react";
 
-interface SingleSnippetPageProps {
+interface SingleBlogPageProps {
   source: MDXRemoteSerializeResult<{
     frontmatter: {
       title: string;
@@ -12,9 +13,9 @@ interface SingleSnippetPageProps {
   }>;
 }
 
-const SingleSnippetPage: React.FC<SingleSnippetPageProps> = ({
+const SnigleBlogPage: React.FC<SingleBlogPageProps> = ({
   source,
-}: SingleSnippetPageProps) => {
+}: SingleBlogPageProps) => {
   return (
     <Container
       title={source.frontmatter.title as string}
@@ -31,12 +32,13 @@ const SingleSnippetPage: React.FC<SingleSnippetPageProps> = ({
   );
 };
 
-export default SingleSnippetPage;
+export default SnigleBlogPage;
+
 //function for getting slugs from getsnippetpreviews function
 export async function getStaticPaths() {
-  const snippetPreviews = await getSnippetPreviews();
+  const blogPreviews = await getBlogPreviews();
 
-  const paths = snippetPreviews.map((preview) => ({
+  const paths = blogPreviews.map((preview) => ({
     params: { slug: preview.slug },
   }));
 
@@ -48,7 +50,7 @@ export async function getStaticPaths() {
 //fetch source code from getsnippetsource function
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   const { slug } = params;
-  const source = await getSnippetSource({ params: { slug } });
+  const source = await getBlogSource({ params: { slug } });
 
   return {
     props: {

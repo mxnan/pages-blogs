@@ -1,7 +1,7 @@
 // Navigation links for desktop
 export const desktoplinks = [
   { name: "Home", link: "/" },
-  { name: "Resources", link: "/resources" },
+  { name: "Blog", link: "/blog" },
   { name: "Snippets", link: "/snippets" },
   { name: "Contact", link: "/contact" },
 
