@@ -23,7 +23,7 @@ export const mobileLinks = [
 export const utilityResourceLinks = [
   {
     title: "Shadcn-UI",
-    description: "Best react component library , Best with Nextjs.",
+    description: "Best react component library , Better with Nextjs.",
     websiteLink: "https://ui.shadcn.com/docs/installation/next",
     link: "Shadcn",
   },

@@ -52,7 +52,7 @@ const Snippetspage = ({
         <Separator
           orientation="horizontal"
           decorative
-          className="mt-5 max-w-3xl"
+          className="mt-5 max-w-3xl bg-violet-300 dark:bg-emerald-800"
         />
         <div className="max-w-3xl py-8 mx-auto w-full flexcenter">
           <div

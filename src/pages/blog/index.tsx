@@ -23,7 +23,7 @@ const BlogsPage = ({
         <Separator
           orientation="horizontal"
           decorative
-          className="my-5 max-w-3xl"
+          className="my-5 max-w-3xl bg-violet-300 dark:bg-emerald-800"
         />
         <div className="max-w-3xl py-8 mx-auto w-full flexcenter">
           <div className="flex-1 flex flex-col gap-6">

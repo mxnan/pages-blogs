@@ -11,8 +11,8 @@ export default function ResourceCard({
   websiteLink,
 }: ResourceCardProps) {
   return (
-    <div className="max-w-sm max-h-44 w-full p-4 flex flex-col justify-around space-y-2 rounded-xl border">
-      <h3 className="text-xl font-bold uppercase text-left mt-2 text-violet-500 dark:text-emerald-500">
+    <div className="max-w-sm max-h-44 w-full p-4 flex flex-col justify-around space-y-2 rounded-xl border border-violet-200 dark:border-emerald-950">
+      <h3 className="text-xl font-bold uppercase text-left mt-2 font-title">
         {title}
       </h3>
       <p className="mt-1 text-stone-700 dark:text-stone-300">{description}</p>

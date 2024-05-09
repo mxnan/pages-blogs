@@ -88,7 +88,7 @@ const FormSection = () => {
                 <FormControl>
                   <Input
                     type="email"
-                    placeholder="markzuckerberg@facebook.com"
+                    placeholder="johndoe@google.com"
                     {...field}
                   />
                 </FormControl>
@@ -119,7 +119,7 @@ const FormSection = () => {
                 <FormLabel>Message</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Hey, I have an idea ?. Lets leak user data to brands. Cover it up for me in best possible way"
+                    placeholder="Hello, I would like to ... "
                     rows={4}
                     {...field}
                   />

@@ -19,7 +19,7 @@ const Resourcespage = () => {
         </p>
       
         <> {/* Utilities section */}
-        <Separator className="my-8 max-w-3xl" />
+        <Separator className="my-8 max-w-3xl bg-violet-300 dark:bg-emerald-800" />
         <div className="space-y-2 max-w-3xl mx-auto">
           <p
             className="text-3xl font-semibold
@@ -49,7 +49,7 @@ const Resourcespage = () => {
         </>
 
         <> {/* User Interface section */}
-        <Separator className="my-8 max-w-3xl" />
+        <Separator className="my-8 max-w-3xl bg-violet-300 dark:bg-emerald-800" />
         <div className="space-y-2 max-w-3xl mx-auto">
           <p
             className="text-3xl font-semibold

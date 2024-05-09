@@ -51,10 +51,14 @@ const Footer = () => {
             </Link>
           ))}
         </div>
-        <div className="absolute max-w-64 w-full space-y-6  -bottom-16 z-30 ">
+        <div
+          className="absolute max-w-64 w-full space-y-6  -bottom-16 z-30
+        right-1/2 translate-x-1/2
+        "
+        >
           <Separator className=" bg-violet-600 dark:bg-emerald-900" />
           <p className="flex items-center justify-center">
-            Developed{" "}
+            Developed by{" "}
             <a
               target="_blank"
               rel="noopener noreferrer"

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { BlogPreview } from "@/lib/types";
 import { getFormattedPublishedAt } from "@/lib/utils";
 
-
 const BlogCard = ({ blog }: { blog: BlogPreview }) => {
   // use formatted time
   const formattedPublishedAt = getFormattedPublishedAt(blog.publishedAt);
@@ -17,15 +16,13 @@ const BlogCard = ({ blog }: { blog: BlogPreview }) => {
         href={`/blog/${blog.slug}`}
       >
         <div className="w-full relative flex-1">
-          <p className="mb-4  text-stone-600 dark:text-stone-400  font-title font-bold uppercase tracking-tight">
+          <p className="mb-4   font-title font-bold uppercase tracking-wider">
             {blog.title}
           </p>
-          <p className="text-stone-600 dark:text-stone-400  tracking-tight">
-            {blog.description}
-          </p>
+          <p className="max-w-xl">{blog.description}</p>
 
-          <div className="mt-8 flex items-center gap-4 justify-end">
-            <p className="text-stone-600 dark:text-stone-400 text-sm font-semibold tracking-tight">
+          <div className="mt-6 flex items-center gap-3 justify-end">
+            <p className=" text-sm font-semibold tracking-tight">
               {formattedPublishedAt}
             </p>
             <Separator
@@ -41,7 +38,5 @@ const BlogCard = ({ blog }: { blog: BlogPreview }) => {
     </>
   );
 };
-
-
 
 export default BlogCard;
