@@ -16,6 +16,7 @@
   }
   .prose-custom {
     @apply prose prose-sm lg:prose-base prose-zinc dark:prose-invert 
+    
      prose-pre:bg-stone-100 dark:prose-pre:bg-zinc-900  prose-pre:border
       dark:prose-code:text-stone-100 prose-code:text-stone-900
     prose-h1:font-title prose-headings:text-stone-900 dark:prose-headings:text-stone-50;

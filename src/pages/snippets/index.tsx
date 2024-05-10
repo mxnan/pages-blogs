@@ -33,9 +33,11 @@ const Snippetspage = ({
         </h1>
         <p className="text-lg font-light flex flex-col gap-2 md:flex-row ">
           This page contains
-          <span className="px-2 mx-2 rounded-lg border
+          <span
+            className="px-2 mx-2 rounded-lg border
            shadow-violet-500 dark:shadow-emerald-500 
-           font-bold w-max flex gap-2">
+           font-bold w-max flex gap-2"
+          >
             code snippets{" "}
             <CodeXmlIcon
               strokeWidth={1}
@@ -64,8 +66,8 @@ const Snippetspage = ({
               <SnippetCard key={i} snippet={snippet} />
             ))}
             <div
-              className="max-w-sm min-h-36 w-full p-4 rounded-xl border
-                  flex items-end justify-end "
+              className="max-w-sm min-h-36 w-full p-4 rounded-xl
+                  flex items-end justify-end border border-violet-200 dark:border-emerald-950 "
             >
               <Button
                 variant={"ghost"}

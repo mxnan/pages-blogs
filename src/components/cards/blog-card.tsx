@@ -16,10 +16,10 @@ const BlogCard = ({ blog }: { blog: BlogPreview }) => {
         href={`/blog/${blog.slug}`}
       >
         <div className="w-full relative flex-1">
-          <p className="mb-4   font-title font-bold uppercase tracking-wider">
+          <p className="mb-4 text-2xl  font-title font-bold uppercase tracking-wider">
             {blog.title}
           </p>
-          <p className="max-w-xl">{blog.description}</p>
+          <p className="max-w-xl text-base">{blog.description}</p>
 
           <div className="mt-6 flex items-center gap-3 justify-end">
             <p className="text-stone-600 dark:text-stone-400 text-sm  tracking-tight">

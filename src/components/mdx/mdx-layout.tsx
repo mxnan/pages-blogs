@@ -25,11 +25,11 @@ export default function MdxLayout({ children }: { children: React.ReactNode }) {
           className="space-x-3"
         >
           <UndoIcon className="stroke-violet-500 dark:stroke-emerald-500" />
-          <span>Back </span>
+          <span>Back ? </span>
         </Button>
       </div>
       <Separator className="mb-8 max-w-xl" />
-      <article className="prose-custom max-w-3xl mx-auto flex flex-col gap-2">
+      <article className="prose-custom max-w-3xl mx-auto flex flex-col">
         {children}
       </article>
       <Separator className="my-8 max-w-xl" />
@@ -40,7 +40,7 @@ export default function MdxLayout({ children }: { children: React.ReactNode }) {
           className="space-x-3"
         >
           <MoveUpIcon className="stroke-violet-500 dark:stroke-emerald-500" />
-          <span>Back to Top ? </span>
+          <span>To Top ? </span>
         </Button>
       </div>
     </div>
