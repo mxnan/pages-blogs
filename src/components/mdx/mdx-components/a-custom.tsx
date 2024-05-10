@@ -12,5 +12,14 @@ export const A = (props: any) => {
     );
   }
 
-  return <a target="_blank" rel="noopener noreferrer" {...props} />;
+  return (
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      className="no-underline px-3 border rounded-lg text-lg capitalize
+       
+       shadow shadow-violet-400 dark:shadow-emerald-900 "
+      {...props}
+    />
+  );
 };

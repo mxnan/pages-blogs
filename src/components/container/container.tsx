@@ -23,7 +23,7 @@ export default function Container(props: ContainerProps) {
         {/* Add more meta tags as needed */}
       </Head>
       <Navbar />
-      <div className="flex flex-col justify-center  p-8  antialiased">
+      <div className="flex flex-col justify-center p-8 antialiased">
         {children}
       </div>
       

@@ -6,7 +6,7 @@ export default function Home() {
       <div className="min-h-screen max-w-7xl mx-auto w-full">
         <div>
           <h1 className="text-4xl"></h1>
-          
+          dsd
         </div>
       </div>
     </Container>

@@ -22,14 +22,14 @@ const BlogCard = ({ blog }: { blog: BlogPreview }) => {
           <p className="max-w-xl">{blog.description}</p>
 
           <div className="mt-6 flex items-center gap-3 justify-end">
-            <p className=" text-sm font-semibold tracking-tight">
+            <p className="text-stone-600 dark:text-stone-400 text-sm  tracking-tight">
               {formattedPublishedAt}
             </p>
             <Separator
               orientation="vertical"
               className="h-6 bg-violet-600 dark:bg-emerald-900"
             />
-            <p className="text-stone-600 dark:text-stone-400 text-sm  font-semibold tracking-tight">
+            <p className="text-stone-600 dark:text-stone-400 text-sm   tracking-tight">
               {blog.readingtime}
             </p>
           </div>

@@ -29,9 +29,11 @@ export default function MdxLayout({ children }: { children: React.ReactNode }) {
         </Button>
       </div>
       <Separator className="mb-8 max-w-xl" />
-      <div className="flex flex-col gap-2">{children}</div>
+      <article className="prose-custom max-w-3xl mx-auto flex flex-col gap-2">
+        {children}
+      </article>
       <Separator className="my-8 max-w-xl" />
-      <div className="">
+      <div className="mt-16">
         <Button
           onClick={() => scrollToTop()} // scroll to top
           variant={"secondary"}

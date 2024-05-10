@@ -18,15 +18,15 @@ const SnippetCard = ({ snippet }: { snippet: SnippetPreview }) => {
         href={`/snippets/${snippet.slug}`}
       >
         <div className="w-full relative space-y-3 flex-1">
-          <p className="mb-2  text-stone-600 dark:text-stone-400  font-title font-bold uppercase tracking-tight">
+          <p className="mb-2    font-title font-bold uppercase tracking-tight">
             {snippet.title}
           </p>
-          <p className="text-stone-600 dark:text-stone-400  tracking-tight">
+          <p className=" tracking-tight">
             {snippet.description}
           </p>
           <Separator
             orientation="horizontal"
-            className=" bg-violet-600 dark:bg-emerald-900"
+            className=" "
           />
           <div className=" flex items-center gap-4 justify-evenly">
             <p className="text-stone-600 dark:text-stone-400 text-sm font-semibold tracking-tight">
@@ -34,7 +34,7 @@ const SnippetCard = ({ snippet }: { snippet: SnippetPreview }) => {
             </p>
             <Separator
               orientation="vertical"
-              className="h-6 bg-violet-600 dark:bg-emerald-900"
+              className="h-6 "
             />
             <p className="text-stone-600 dark:text-stone-400 text-sm  font-semibold tracking-tight">
               {formattedPublishedAt}

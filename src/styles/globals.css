@@ -6,7 +6,7 @@
   @apply bg-white text-stone-900/90;
 }
 .dark:root {
-  @apply bg-black/50 text-white/90;
+  @apply bg-black/50 text-white;
 }
 
 @layer base {
@@ -14,7 +14,12 @@
   .border {
     @apply border-stone-200 dark:border-stone-800 border-[1px] shadow-sm;
   }
-
+  .prose-custom {
+    @apply prose prose-sm lg:prose-base prose-zinc dark:prose-invert 
+     prose-pre:bg-stone-100 dark:prose-pre:bg-zinc-900  prose-pre:border
+      dark:prose-code:text-stone-100 prose-code:text-stone-900
+    prose-h1:font-title prose-headings:text-stone-900 dark:prose-headings:text-stone-50;
+  }
   .flexcenter {
     @apply flex items-center justify-center;
   }
