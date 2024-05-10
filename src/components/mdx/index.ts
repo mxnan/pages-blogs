@@ -4,12 +4,15 @@ export { MdxLayout };
 
 //import custom components
 
-import { A } from "./mdx-components/a-custom";
+import { CustomA } from "./mdx-components/custom-a";
+import { CustomBlockquote } from "./mdx-components/custom-blockquote";
 import { Separator } from "../ui/separator";
+
 
 const MDXComponents = {
   // specifying the custom MDX components
-  a: A,
+  a: CustomA,
+  blockquote: CustomBlockquote,
   Separator,
 };
 

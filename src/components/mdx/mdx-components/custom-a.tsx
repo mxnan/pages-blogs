@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-export const A = (props: any) => {
+export const CustomA = (props: any) => {
   const { href, children, ...rest } = props;
   const isInternalLink = href && (href.startsWith("/") || href.startsWith("#"));
   if (isInternalLink) {
