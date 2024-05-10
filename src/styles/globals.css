@@ -8,6 +8,20 @@
 .dark:root {
   @apply bg-black/50 text-white;
 }
+/* Custom scrollbar */
+::-webkit-scrollbar-thumb {
+  @apply bg-violet-400 dark:bg-emerald-500;
+}
+::-webkit-scrollbar-track {
+  @apply bg-stone-800 dark:bg-stone-200;
+}
+::-webkit-scrollbar {
+  @apply w-2 h-2 rounded-xl bg-transparent;
+}
+::-webkit-scrollbar-button {
+  @apply bg-stone-500 dark:bg-stone-500;
+}
+/* Custom scrollbar */
 
 @layer base {
   /* Customize your global styles here */
