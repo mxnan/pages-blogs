@@ -38,10 +38,15 @@ const Footer = () => {
         />
         <div className="w-max flex flex-col gap-4">
           {mobileLinks.map((link: MobileLinkProps) => (
-            <Link key={link.link} href={link.link} legacyBehavior>
+            <Link
+              key={link.link}
+              href={link.link}
+              legacyBehavior
+              className="w-max"
+            >
               <a
                 className={cn(
-                  "p-2 underline underline-offset-4 hover:no-underline font-title",
+                  "w-min pb-1 underline underline-offset-4 hover:no-underline hover:bg-[url('/static/swiggle-underline.svg')] font-title",
                   router.pathname === link.link &&
                     " text-violet-700 shadow-violet-500 dark:shadow-emerald-500  dark:text-emerald-500 "
                 )}

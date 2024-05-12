@@ -15,12 +15,12 @@ const DesktopNav = () => {
           <a
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
-            className="relative rounded-xl px-4 py-2 uppercase font-bold "
+            className="relative rounded-xl px-4 py-2 uppercase font-bold  "
           >
             <AnimatePresence>
               {hoveredIndex === index && (
                 <motion.span
-                  className="absolute inset-0 rounded-xl bg-zinc-100 dark:bg-zinc-800"
+                  className="absolute inset-0 rounded-xl bg-zinc-100 dark:bg-zinc-800 "
                   layoutId="hoverBackground"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1, transition: { duration: 0.5 } }}
@@ -33,7 +33,7 @@ const DesktopNav = () => {
             </AnimatePresence>
             <span
               className={cn(
-                "transition-all duration-1000 ease-in-out relative z-10",
+                "transition-all duration-1000 ease-in-out relative z-10 ",
                 router.asPath === link.link &&
                   "text-violet-600 dark:text-emerald-500"
               )}
