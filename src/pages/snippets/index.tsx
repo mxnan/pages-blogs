@@ -27,7 +27,7 @@ const Snippetspage = ({
       title="Snippets"
       description="Code snippets for display, edit, and share"
     >
-      <div className="max-w-4xl mx-auto w-full flex flex-col justify-center gap-4 p-2 ">
+      <div className=" w-full flex flex-col items-start justify-center gap-4 p-2 ">
         <h1 className="text-7xl max-sm:text-5xl mb-6 font-bold font-title uppercase ">
           Code Snippets
         </h1>

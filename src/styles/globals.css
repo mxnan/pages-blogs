@@ -38,11 +38,9 @@
   .flexcenter {
     @apply flex items-center justify-center;
   }
-  .sticky-nav {
-    position: sticky;
-    z-index: 999;
-    top: 0;
+  .fixed-nav{
     backdrop-filter: saturate(200%) blur(20px);
     transition: background-color 0.1 ease-in-out;
   }
+
 }

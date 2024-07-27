@@ -10,6 +10,13 @@ const config = {
   ],
   prefix: "",
   theme: {
+    container: {
+      center: true,
+      padding: "1.5rem",
+      screens: {
+        "4xl": { max: "2000px" },
+      },
+    },
     extend: {
       screens: {
         sm: "500px",
